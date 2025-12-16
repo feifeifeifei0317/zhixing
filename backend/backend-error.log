@@ -1,0 +1,599 @@
+
+==================================================
+时间: 2025-12-10 20:47:01.249243
+PPT转视频错误: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 92, in _convert_to_video_sync_ai
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 77, in _convert_to_video_sync
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 102, in _convert_to_video_sync_ai
+    return base_service._convert_to_video_sync(ppt_path, False)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 136, in _convert_to_video_sync
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\main.py", line 107, in ppt_to_video
+    video_path = await ppt_to_video_service.convert_to_video(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 39, in convert_to_video
+    return await loop.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 257, in _convert_to_video_sync_ai
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+
+==================================================
+时间: 2025-12-10 20:48:28.900162
+PPT转视频错误: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 92, in _convert_to_video_sync_ai
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 77, in _convert_to_video_sync
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 102, in _convert_to_video_sync_ai
+    return base_service._convert_to_video_sync(ppt_path, False)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 136, in _convert_to_video_sync
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\main.py", line 107, in ppt_to_video
+    video_path = await ppt_to_video_service.convert_to_video(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 39, in convert_to_video
+    return await loop.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 257, in _convert_to_video_sync_ai
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+
+==================================================
+时间: 2025-12-10 20:54:24.716056
+PPT转视频错误: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 92, in _convert_to_video_sync_ai
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 77, in _convert_to_video_sync
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 102, in _convert_to_video_sync_ai
+    return base_service._convert_to_video_sync(ppt_path, False)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 136, in _convert_to_video_sync
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\main.py", line 107, in ppt_to_video
+    video_path = await ppt_to_video_service.convert_to_video(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 39, in convert_to_video
+    return await loop.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 257, in _convert_to_video_sync_ai
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+
+==================================================
+时间: 2025-12-10 20:55:58.348818
+PPT转视频错误: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 92, in _convert_to_video_sync_ai
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 77, in _convert_to_video_sync
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 102, in _convert_to_video_sync_ai
+    return base_service._convert_to_video_sync(ppt_path, False)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 136, in _convert_to_video_sync
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\main.py", line 107, in ppt_to_video
+    video_path = await ppt_to_video_service.convert_to_video(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 39, in convert_to_video
+    return await loop.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 257, in _convert_to_video_sync_ai
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+
+==================================================
+时间: 2025-12-10 20:55:59.239345
+PPT转视频错误: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 92, in _convert_to_video_sync_ai
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 77, in _convert_to_video_sync
+    final_video = final_video.resize(height=720)
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: 'ImageSequenceClip' object has no attribute 'resize'. Did you mean: 'resized'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 102, in _convert_to_video_sync_ai
+    return base_service._convert_to_video_sync(ppt_path, False)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video.py", line 136, in _convert_to_video_sync
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\main.py", line 107, in ppt_to_video
+    video_path = await ppt_to_video_service.convert_to_video(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 39, in convert_to_video
+    return await loop.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 257, in _convert_to_video_sync_ai
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 转换视频失败: 'ImageSequenceClip' object has no attribute 'resize'
+
+
+==================================================
+时间: 2025-12-10 21:00:34.936404
+PPT转视频错误: 转换视频失败: 视频导出失败: got an unexpected keyword argument 'verbose'
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 181, in _convert_to_video_sync_ai
+    final_video.write_videofile(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(output_path),
+        ^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        threads=4  # 使用多线程加速
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 234, in fun
+    args, kw = fix(args, kw, sig)
+               ~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 204, in fix
+    ba = sig.bind(*args, **kwargs)
+  File "C:\Python314\Lib\inspect.py", line 3225, in bind
+    return self._bind(args, kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\inspect.py", line 3214, in _bind
+    raise TypeError(
+        'got an unexpected keyword argument {arg!r}'.format(
+            arg=next(iter(kwargs))))
+TypeError: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 204, in _convert_to_video_sync_ai
+    final_video.write_videofile(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(output_path),
+        ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=None
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 234, in fun
+    args, kw = fix(args, kw, sig)
+               ~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 204, in fix
+    ba = sig.bind(*args, **kwargs)
+  File "C:\Python314\Lib\inspect.py", line 3225, in bind
+    return self._bind(args, kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\inspect.py", line 3214, in _bind
+    raise TypeError(
+        'got an unexpected keyword argument {arg!r}'.format(
+            arg=next(iter(kwargs))))
+TypeError: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 215, in _convert_to_video_sync_ai
+    raise Exception(f"视频导出失败: {str(write_error)}")
+Exception: 视频导出失败: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\main.py", line 107, in ppt_to_video
+    video_path = await ppt_to_video_service.convert_to_video(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 39, in convert_to_video
+    return await loop.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 257, in _convert_to_video_sync_ai
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 视频导出失败: got an unexpected keyword argument 'verbose'
+
+
+==================================================
+时间: 2025-12-10 21:01:42.527381
+PPT转视频错误: 转换视频失败: 视频导出失败: got an unexpected keyword argument 'verbose'
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 181, in _convert_to_video_sync_ai
+    final_video.write_videofile(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(output_path),
+        ^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        threads=4  # 使用多线程加速
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 234, in fun
+    args, kw = fix(args, kw, sig)
+               ~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 204, in fix
+    ba = sig.bind(*args, **kwargs)
+  File "C:\Python314\Lib\inspect.py", line 3225, in bind
+    return self._bind(args, kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\inspect.py", line 3214, in _bind
+    raise TypeError(
+        'got an unexpected keyword argument {arg!r}'.format(
+            arg=next(iter(kwargs))))
+TypeError: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 204, in _convert_to_video_sync_ai
+    final_video.write_videofile(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(output_path),
+        ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=None
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 234, in fun
+    args, kw = fix(args, kw, sig)
+               ~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 204, in fix
+    ba = sig.bind(*args, **kwargs)
+  File "C:\Python314\Lib\inspect.py", line 3225, in bind
+    return self._bind(args, kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\inspect.py", line 3214, in _bind
+    raise TypeError(
+        'got an unexpected keyword argument {arg!r}'.format(
+            arg=next(iter(kwargs))))
+TypeError: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 215, in _convert_to_video_sync_ai
+    raise Exception(f"视频导出失败: {str(write_error)}")
+Exception: 视频导出失败: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\main.py", line 107, in ppt_to_video
+    video_path = await ppt_to_video_service.convert_to_video(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 39, in convert_to_video
+    return await loop.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 257, in _convert_to_video_sync_ai
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 视频导出失败: got an unexpected keyword argument 'verbose'
+
+
+==================================================
+时间: 2025-12-10 21:03:49.821736
+PPT转视频错误: 转换视频失败: 视频导出失败: got an unexpected keyword argument 'verbose'
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 181, in _convert_to_video_sync_ai
+    final_video.write_videofile(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(output_path),
+        ^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        threads=4  # 使用多线程加速
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 234, in fun
+    args, kw = fix(args, kw, sig)
+               ~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 204, in fix
+    ba = sig.bind(*args, **kwargs)
+  File "C:\Python314\Lib\inspect.py", line 3225, in bind
+    return self._bind(args, kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\inspect.py", line 3214, in _bind
+    raise TypeError(
+        'got an unexpected keyword argument {arg!r}'.format(
+            arg=next(iter(kwargs))))
+TypeError: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 204, in _convert_to_video_sync_ai
+    final_video.write_videofile(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(output_path),
+        ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=None
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 234, in fun
+    args, kw = fix(args, kw, sig)
+               ~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 204, in fix
+    ba = sig.bind(*args, **kwargs)
+  File "C:\Python314\Lib\inspect.py", line 3225, in bind
+    return self._bind(args, kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\inspect.py", line 3214, in _bind
+    raise TypeError(
+        'got an unexpected keyword argument {arg!r}'.format(
+            arg=next(iter(kwargs))))
+TypeError: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 215, in _convert_to_video_sync_ai
+    raise Exception(f"视频导出失败: {str(write_error)}")
+Exception: 视频导出失败: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\main.py", line 107, in ppt_to_video
+    video_path = await ppt_to_video_service.convert_to_video(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 39, in convert_to_video
+    return await loop.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 257, in _convert_to_video_sync_ai
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 视频导出失败: got an unexpected keyword argument 'verbose'
+
+
+==================================================
+时间: 2025-12-10 21:12:18.346443
+PPT转视频错误: 转换视频失败: 视频导出失败: got an unexpected keyword argument 'verbose'
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 188, in _convert_to_video_sync_ai
+    final_video.write_videofile(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(output_path),
+        ^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        threads=4  # 使用多线程加速
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 234, in fun
+    args, kw = fix(args, kw, sig)
+               ~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 204, in fix
+    ba = sig.bind(*args, **kwargs)
+  File "C:\Python314\Lib\inspect.py", line 3225, in bind
+    return self._bind(args, kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\inspect.py", line 3214, in _bind
+    raise TypeError(
+        'got an unexpected keyword argument {arg!r}'.format(
+            arg=next(iter(kwargs))))
+TypeError: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 211, in _convert_to_video_sync_ai
+    final_video.write_videofile(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        str(output_path),
+        ^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        logger=None
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 234, in fun
+    args, kw = fix(args, kw, sig)
+               ~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\site-packages\decorator.py", line 204, in fix
+    ba = sig.bind(*args, **kwargs)
+  File "C:\Python314\Lib\inspect.py", line 3225, in bind
+    return self._bind(args, kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\inspect.py", line 3214, in _bind
+    raise TypeError(
+        'got an unexpected keyword argument {arg!r}'.format(
+            arg=next(iter(kwargs))))
+TypeError: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 222, in _convert_to_video_sync_ai
+    raise Exception(f"视频导出失败: {str(write_error)}")
+Exception: 视频导出失败: got an unexpected keyword argument 'verbose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\86159\Desktop\线上课程系统\backend\main.py", line 107, in ppt_to_video
+    video_path = await ppt_to_video_service.convert_to_video(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 39, in convert_to_video
+    return await loop.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\86159\Desktop\线上课程系统\backend\services\ppt_to_video_ai.py", line 264, in _convert_to_video_sync_ai
+    raise Exception(f"转换视频失败: {str(e)}")
+Exception: 转换视频失败: 视频导出失败: got an unexpected keyword argument 'verbose'
+

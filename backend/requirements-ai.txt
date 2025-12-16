@@ -1,0 +1,24 @@
+# AI服务集成所需的额外依赖
+
+# 百度AI SDK
+baidu-aip>=4.16.0
+
+# 腾讯云SDK
+tencentcloud-sdk-python>=3.0.0
+
+# OpenAI SDK（可选）
+openai>=1.0.0
+
+# Azure语音服务SDK（可选）
+azure-cognitiveservices-speech>=1.32.0
+
+# 环境变量管理
+python-dotenv>=1.0.0
+
+
+
+
+
+
+
+
