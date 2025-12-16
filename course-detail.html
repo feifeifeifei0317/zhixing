@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程详情 - 智星</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="course-detail.css">
+</head>
+<body class="theme-wine">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <div class="logo">智星</div>
+                <div class="platform-info">
+                    <div class="platform-name">AI线上课程平台</div>
+                    <div class="platform-slogan" id="platformSlogan">你的线上学习好伙伴</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-center">
+            <a href="#" class="nav-item" id="homeLink">主页</a>
+            <a href="#" class="nav-item" id="coursesLink">课程中心</a>
+            <a href="#" class="nav-item" id="learningLink">课程学习</a>
+            <a href="#" class="nav-item" id="schoolLink">学校</a>
+            <a href="#" class="nav-item" id="examLink">课程考试</a>
+            <a href="#" class="nav-item ai-assistant" id="aiLink">
+                <span class="ai-text">Hi，小智！</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <!-- 搜索栏 -->
+            <div class="search-container">
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索课程、直播、老师、学校...">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+                <!-- 热门搜索下拉框 -->
+                <div class="search-dropdown" id="searchDropdown">
+                    <div class="search-dropdown-header">热门搜索</div>
+                    <div class="hot-searches">
+                        <div class="hot-search-item" data-keyword="高等数学">高等数学</div>
+                        <div class="hot-search-item" data-keyword="机器学习">机器学习</div>
+                        <div class="hot-search-item" data-keyword="数据结构">数据结构</div>
+                        <div class="hot-search-item" data-keyword="张教授">张教授</div>
+                        <div class="hot-search-item" data-keyword="北京大学">北京大学</div>
+                        <div class="hot-search-item" data-keyword="Python编程">Python编程</div>
+                        <div class="hot-search-item" data-keyword="直播课程">直播课程</div>
+                        <div class="hot-search-item" data-keyword="清华大学">清华大学</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主题选择器下拉菜单 -->
+            <div class="theme-selector-dropdown">
+                <span class="theme-selector-trigger">选择主题颜色</span>
+                <div class="theme-dropdown-menu">
+                    <button class="theme-option" data-theme="wine">
+                        <span class="theme-color wine"></span>
+                        <span class="theme-name">酒红色</span>
+                    </button>
+                    <button class="theme-option" data-theme="blue">
+                        <span class="theme-color blue"></span>
+                        <span class="theme-name">深蓝色</span>
+                    </button>
+                    <button class="theme-option" data-theme="green">
+                        <span class="theme-color green"></span>
+                        <span class="theme-name">深绿色</span>
+                    </button>
+                </div>
+            </div>
+            <!-- 用户头像 -->
+            <div class="user-avatar-container">
+                <img src="" alt="头像" class="user-avatar" id="userAvatar">
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="course-detail-main">
+        <div class="course-detail-container">
+            <!-- 退出按钮 -->
+            <button class="back-btn" id="backBtn">← 返回</button>
+
+            <!-- 课程头部信息 -->
+            <div class="course-header">
+                <div class="course-cover-large">
+                    <img id="courseCover" src="" alt="课程封面">
+                </div>
+                <div class="course-header-info">
+                    <h1 class="course-title" id="courseTitle">课程标题</h1>
+                    <div class="course-stats">
+                        <span class="stat-item">
+                            <span class="stat-icon">👥</span>
+                            <span id="courseStudents">0</span> 人学习
+                        </span>
+                        <span class="stat-item">
+                            <span class="stat-icon">📚</span>
+                            <span id="courseCount">0</span> 个课程
+                        </span>
+                        <span class="stat-item">
+                            <span class="stat-icon">⭐</span>
+                            <span id="courseRating">0.0</span> 分
+                        </span>
+                    </div>
+                    <div class="course-actions">
+                        <button class="action-btn like-btn" id="likeBtn">
+                            <span class="btn-icon">❤️</span>
+                            <span class="btn-text">喜欢</span>
+                        </button>
+                        <button class="action-btn favorite-btn" id="favoriteBtn">
+                            <span class="btn-icon">⭐</span>
+                            <span class="btn-text">收藏</span>
+                        </button>
+                        <button class="action-btn enroll-btn" id="enrollBtn">
+                            <span class="btn-text">选择课程</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 课程详细信息 -->
+            <div class="course-content">
+                <!-- 讲师介绍 -->
+                <section class="course-section">
+                    <h2 class="section-title">讲师介绍</h2>
+                    <div class="instructor-card">
+                        <div class="instructor-avatar">
+                            <img id="instructorAvatar" src="" alt="讲师头像">
+                        </div>
+                        <div class="instructor-info">
+                            <h3 class="instructor-name" id="instructorName">讲师姓名</h3>
+                            <p class="instructor-title" id="instructorTitle">讲师职称</p>
+                            <p class="instructor-desc" id="instructorDesc">讲师简介</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 课程主要内容 -->
+                <section class="course-section">
+                    <h2 class="section-title">课程主要内容</h2>
+                    <div class="course-description" id="courseDescription">
+                        <p>课程详细描述内容...</p>
+                    </div>
+                </section>
+
+                <!-- 课程目录 -->
+                <section class="course-section">
+                    <h2 class="section-title">课程目录</h2>
+                    <div class="course-chapters" id="courseChapters">
+                        <!-- 课程章节将通过JavaScript动态生成 -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="search-common.js"></script>
+    <script src="course-detail.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程学习 - 智星</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="course-study.css">
+</head>
+<body class="theme-wine">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <div class="logo">智星</div>
+                <div class="platform-info">
+                    <div class="platform-name">AI线上课程平台</div>
+                    <div class="platform-slogan" id="platformSlogan">你的线上学习好伙伴</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-center">
+            <a href="#" class="nav-item" id="homeLink">主页</a>
+            <a href="#" class="nav-item" id="coursesLink">课程中心</a>
+            <a href="#" class="nav-item active" id="learningLink">课程学习</a>
+            <a href="#" class="nav-item" id="schoolLink">学校</a>
+            <a href="#" class="nav-item" id="examLink">课程考试</a>
+            <a href="#" class="nav-item ai-assistant" id="aiLink">
+                <span class="ai-text">Hi，小智！</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <!-- 主题选择器下拉菜单 -->
+            <div class="theme-selector-dropdown">
+                <span class="theme-selector-trigger">选择主题颜色</span>
+                <div class="theme-dropdown-menu">
+                    <button class="theme-option" data-theme="wine">
+                        <span class="theme-color wine"></span>
+                        <span class="theme-name">酒红色</span>
+                    </button>
+                    <button class="theme-option" data-theme="blue">
+                        <span class="theme-color blue"></span>
+                        <span class="theme-name">深蓝色</span>
+                    </button>
+                    <button class="theme-option" data-theme="green">
+                        <span class="theme-color green"></span>
+                        <span class="theme-name">深绿色</span>
+                    </button>
+                </div>
+            </div>
+            <!-- 用户头像 -->
+            <div class="user-avatar-container">
+                <img src="" alt="头像" class="user-avatar" id="userAvatar">
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="course-study-main">
+        <div class="course-study-container">
+            <!-- 返回按钮 -->
+            <button class="back-btn" id="backBtn">← 返回</button>
+
+            <div class="course-study-header">
+                <h1 id="courseTitle">课程目录</h1>
+            </div>
+
+            <!-- 课程目录 -->
+            <div class="course-chapters-container" id="courseChaptersContainer">
+                <!-- 课程目录将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="course-study.js"></script>
+</body>
+</html>

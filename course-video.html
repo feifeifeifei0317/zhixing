@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频学习 - 智星</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="course-video.css">
+</head>
+<body class="theme-wine">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <div class="logo">智星</div>
+                <div class="platform-info">
+                    <div class="platform-name">AI线上课程平台</div>
+                    <div class="platform-slogan" id="platformSlogan">你的线上学习好伙伴</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-center">
+            <a href="#" class="nav-item" id="homeLink">主页</a>
+            <a href="#" class="nav-item" id="coursesLink">课程中心</a>
+            <a href="#" class="nav-item active" id="learningLink">课程学习</a>
+            <a href="#" class="nav-item" id="schoolLink">学校</a>
+            <a href="#" class="nav-item" id="examLink">课程考试</a>
+            <a href="#" class="nav-item ai-assistant" id="aiLink">
+                <span class="ai-text">Hi，小智！</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <!-- 主题选择器下拉菜单 -->
+            <div class="theme-selector-dropdown">
+                <span class="theme-selector-trigger">选择主题颜色</span>
+                <div class="theme-dropdown-menu">
+                    <button class="theme-option" data-theme="wine">
+                        <span class="theme-color wine"></span>
+                        <span class="theme-name">酒红色</span>
+                    </button>
+                    <button class="theme-option" data-theme="blue">
+                        <span class="theme-color blue"></span>
+                        <span class="theme-name">深蓝色</span>
+                    </button>
+                    <button class="theme-option" data-theme="green">
+                        <span class="theme-color green"></span>
+                        <span class="theme-name">深绿色</span>
+                    </button>
+                </div>
+            </div>
+            <!-- 用户头像 -->
+            <div class="user-avatar-container">
+                <img src="" alt="头像" class="user-avatar" id="userAvatar">
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="video-main">
+        <div class="video-container">
+            <!-- 左侧视频播放区域 -->
+            <div class="video-player-section">
+                <div class="video-wrapper">
+                    <video id="courseVideo" class="course-video">
+                        <source src="" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                    <!-- 自定义控制栏 -->
+                    <div class="video-controls" id="videoControls">
+                        <div class="controls-top">
+                            <button class="control-btn fullscreen-btn" id="fullscreenBtn" title="全屏">⛶</button>
+                        </div>
+                        <div class="controls-bottom">
+                            <div class="playback-controls">
+                                <button class="control-btn play-pause-btn" id="playPauseBtn">▶</button>
+                                <span class="time-display">
+                                    <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+                                </span>
+                            </div>
+                            <div class="progress-controls">
+                                <input type="range" id="progressBar" class="progress-slider" min="0" max="100" value="0">
+                            </div>
+                            <div class="settings-controls">
+                                <div class="speed-control">
+                                    <button class="control-btn speed-btn" id="speedBtn" title="播放速度">1.0x</button>
+                                    <div class="speed-menu" id="speedMenu" style="display: none;">
+                                        <button class="speed-option" data-speed="0.5">0.5x</button>
+                                        <button class="speed-option" data-speed="0.75">0.75x</button>
+                                        <button class="speed-option active" data-speed="1.0">1.0x</button>
+                                        <button class="speed-option" data-speed="1.25">1.25x</button>
+                                        <button class="speed-option" data-speed="1.5">1.5x</button>
+                                        <button class="speed-option" data-speed="2.0">2.0x</button>
+                                    </div>
+                                </div>
+                                <button class="control-btn fullscreen-btn-bottom" id="fullscreenBtnBottom" title="全屏">⛶</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 全屏退出按钮（右下角） -->
+                    <button class="exit-fullscreen-btn" id="exitFullscreenBtn" style="display: none;" title="退出全屏">✕</button>
+                </div>
+                <div class="video-info">
+                    <h2 class="video-title" id="videoTitle">课程标题</h2>
+                    <div class="video-meta">
+                        <span id="videoInstructor">讲师</span>
+                        <span id="videoChapter">章节</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧目录和功能区域 -->
+            <div class="video-sidebar">
+                <!-- 目录视图 -->
+                <div class="sidebar-view" id="chaptersView">
+                    <div class="sidebar-header">
+                        <h3 class="sidebar-title">课程目录</h3>
+                        <div class="sidebar-actions">
+                            <button class="action-icon-btn" id="aiAnswerBtn" title="AI回答问题">
+                                <span class="icon">🤖</span>
+                            </button>
+                            <button class="action-icon-btn" id="noteBtn" title="记笔记">
+                                <span class="icon">📝</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chapters-list" id="chaptersList">
+                        <!-- 课程目录将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+
+                <!-- AI对话视图 -->
+                <div class="sidebar-view" id="aiChatView" style="display: none;">
+                    <div class="sidebar-header">
+                        <h3 class="sidebar-title">AI问答</h3>
+                        <button class="back-to-chapters-btn" id="backFromAiBtn" title="返回目录">← 返回</button>
+                    </div>
+                    <div class="ai-chat-container">
+                        <div class="ai-chat-area" id="aiChatArea">
+                            <div class="chat-message ai">
+                                <div class="chat-bubble">你好，我是小智，有什么问题可以问我！</div>
+                            </div>
+                        </div>
+                        <div class="ai-input-area">
+                            <textarea id="aiQuestionInput" placeholder="请输入你的问题..." rows="2"></textarea>
+                            <button id="sendAiQuestion" class="send-btn">发送</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 笔记视图 -->
+                <div class="sidebar-view" id="noteView" style="display: none;">
+                    <div class="sidebar-header">
+                        <h3 class="sidebar-title">学习笔记</h3>
+                        <button class="back-to-chapters-btn" id="backFromNoteBtn" title="返回目录">← 返回</button>
+                    </div>
+                    <div class="note-container">
+                        <textarea id="noteContent" placeholder="在这里记录你的学习笔记..." class="note-textarea"></textarea>
+                        <div class="note-actions">
+                            <button class="save-note-btn" id="saveNoteBtn">保存笔记</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="course-video.js"></script>
+</body>
+</html>
+

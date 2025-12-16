@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智星 - 课程平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body class="theme-wine">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <div class="logo">智星</div>
+                <div class="platform-info">
+                    <div class="platform-name">AI线上课程平台</div>
+                    <div class="platform-slogan" id="platformSlogan">你的线上学习好伙伴</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-center">
+            <a href="#" class="nav-item active" id="homeLink">主页</a>
+            <a href="#" class="nav-item" id="coursesLink">课程中心</a>
+            <a href="#" class="nav-item" id="learningLink">课程学习</a>
+            <a href="#" class="nav-item" id="schoolLink">学校</a>
+            <a href="#" class="nav-item" id="examLink">课程考试</a>
+            <a href="#" class="nav-item ai-assistant" id="aiLink">
+                <span class="ai-text">Hi，小智！</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <!-- 搜索栏 -->
+            <div class="search-container">
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索课程、直播、老师、学校...">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+                <!-- 热门搜索下拉框 -->
+                <div class="search-dropdown" id="searchDropdown">
+                    <div class="search-dropdown-header">热门搜索</div>
+                    <div class="hot-searches">
+                        <div class="hot-search-item" data-keyword="高等数学">高等数学</div>
+                        <div class="hot-search-item" data-keyword="机器学习">机器学习</div>
+                        <div class="hot-search-item" data-keyword="数据结构">数据结构</div>
+                        <div class="hot-search-item" data-keyword="张教授">张教授</div>
+                        <div class="hot-search-item" data-keyword="北京大学">北京大学</div>
+                        <div class="hot-search-item" data-keyword="Python编程">Python编程</div>
+                        <div class="hot-search-item" data-keyword="直播课程">直播课程</div>
+                        <div class="hot-search-item" data-keyword="清华大学">清华大学</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主题选择器下拉菜单 -->
+            <div class="theme-selector-dropdown">
+                <span class="theme-selector-trigger">选择主题颜色</span>
+                <div class="theme-dropdown-menu">
+                    <button class="theme-option" data-theme="wine">
+                        <span class="theme-color wine"></span>
+                        <span class="theme-name">酒红色</span>
+                    </button>
+                    <button class="theme-option" data-theme="blue">
+                        <span class="theme-color blue"></span>
+                        <span class="theme-name">深蓝色</span>
+                    </button>
+                    <button class="theme-option" data-theme="green">
+                        <span class="theme-color green"></span>
+                        <span class="theme-name">深绿色</span>
+                    </button>
+                </div>
+            </div>
+            <!-- 用户头像 -->
+            <div class="user-avatar-container">
+                <img src="" alt="头像" class="user-avatar" id="userAvatar">
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <div class="content-container">
+            <h1>欢迎来到智星平台</h1>
+        </div>
+
+        <!-- 课程推荐区域 -->
+        <section class="course-recommendation-section">
+            <div class="course-carousel-container">
+                <h2 class="section-title">优秀课程推荐</h2>
+                <div class="course-carousel-wrapper">
+                    <button class="carousel-btn carousel-btn-prev" id="prevBtn">‹</button>
+                    <div class="course-carousel" id="courseCarousel">
+                        <div class="course-card" data-course-id="1">
+                            <div class="course-image">
+                                <img src="https://via.placeholder.com/400x250/8B1538/FFFFFF?text=高等数学" alt="高等数学">
+                            </div>
+                            <div class="course-info">
+                                <h3 class="course-title">高等数学</h3>
+                                <p class="course-description">深入理解微积分、极限、导数等核心概念，为后续专业课程打下坚实基础。</p>
+                                <div class="course-meta">
+                                    <span class="course-instructor">主讲：张教授</span>
+                                    <span class="course-students">已有 5000+ 人学习</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card" data-course-id="2">
+                            <div class="course-image">
+                                <img src="https://via.placeholder.com/400x250/1E3A8A/FFFFFF?text=线性代数" alt="线性代数">
+                            </div>
+                            <div class="course-info">
+                                <h3 class="course-title">线性代数</h3>
+                                <p class="course-description">掌握矩阵运算、向量空间、特征值等知识，培养抽象思维能力。</p>
+                                <div class="course-meta">
+                                    <span class="course-instructor">主讲：李教授</span>
+                                    <span class="course-students">已有 4200+ 人学习</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card" data-course-id="3">
+                            <div class="course-image">
+                                <img src="https://via.placeholder.com/400x250/166534/FFFFFF?text=数据结构" alt="数据结构">
+                            </div>
+                            <div class="course-info">
+                                <h3 class="course-title">数据结构与算法</h3>
+                                <p class="course-description">学习常用数据结构与算法设计，提升编程能力和问题解决技巧。</p>
+                                <div class="course-meta">
+                                    <span class="course-instructor">主讲：王教授</span>
+                                    <span class="course-students">已有 6800+ 人学习</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card" data-course-id="4">
+                            <div class="course-image">
+                                <img src="https://via.placeholder.com/400x250/7C2D12/FFFFFF?text=英语写作" alt="英语写作">
+                            </div>
+                            <div class="course-info">
+                                <h3 class="course-title">英语学术写作</h3>
+                                <p class="course-description">提升英语学术写作能力，掌握论文写作规范和技巧，助力学术研究。</p>
+                                <div class="course-meta">
+                                    <span class="course-instructor">主讲：Sarah老师</span>
+                                    <span class="course-students">已有 3500+ 人学习</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-card" data-course-id="5">
+                            <div class="course-image">
+                                <img src="https://via.placeholder.com/400x250/581C87/FFFFFF?text=机器学习" alt="机器学习">
+                            </div>
+                            <div class="course-info">
+                                <h3 class="course-title">机器学习基础</h3>
+                                <p class="course-description">入门机器学习领域，学习监督学习、无监督学习等核心算法与应用。</p>
+                                <div class="course-meta">
+                                    <span class="course-instructor">主讲：陈教授</span>
+                                    <span class="course-students">已有 8900+ 人学习</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-btn-next" id="nextBtn">›</button>
+                </div>
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                    <span class="indicator" data-index="3"></span>
+                    <span class="indicator" data-index="4"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最近直播区域 -->
+        <section class="live-section">
+            <div class="live-container">
+                <div class="live-main-content">
+                    <!-- 左半部分：最近直播 -->
+                    <div class="live-current">
+                        <h2 class="live-section-title">最近直播</h2>
+                        <div class="live-player-card">
+                            <div class="live-status-badge live">直播中</div>
+                            <div class="live-thumbnail">
+                                <img src="https://via.placeholder.com/600x400/8B1538/FFFFFF?text=高等数学直播课" alt="正在直播">
+                                <div class="live-overlay">
+                                    <div class="live-viewers">👁 1,234 人观看</div>
+                                    <button class="live-enter-btn">进入直播间</button>
+                                </div>
+                            </div>
+                            <div class="live-info">
+                                <h3 class="live-title">高等数学 - 微积分专题讲解</h3>
+                                <div class="live-meta">
+                                    <span class="live-instructor">张教授</span>
+                                    <span class="live-time">已直播 1小时25分钟</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右半部分：导航栏和内容 -->
+                    <div class="live-sidebar">
+                        <!-- 类型导航栏 -->
+                        <div class="live-category-nav">
+                            <button class="category-btn active" data-category="all">全部</button>
+                            <button class="category-btn" data-category="math">数学</button>
+                            <button class="category-btn" data-category="cs">计算机</button>
+                            <button class="category-btn" data-category="english">英语</button>
+                            <button class="category-btn" data-category="science">理工</button>
+                            <button class="category-more-btn" id="moreCategoriesBtn">⋯</button>
+                        </div>
+
+                        <!-- 更多类型下拉菜单 -->
+                        <div class="more-categories-menu" id="moreCategoriesMenu" style="display: none;">
+                            <button class="category-btn" data-category="art">艺术</button>
+                            <button class="category-btn" data-category="history">历史</button>
+                            <button class="category-btn" data-category="physics">物理</button>
+                            <button class="category-btn" data-category="chemistry">化学</button>
+                            <button class="category-btn" data-category="biology">生物</button>
+                        </div>
+
+                        <!-- 未直播列表 -->
+                        <div class="upcoming-lives">
+                            <h3 class="subsection-title">未直播</h3>
+                            <div class="upcoming-list">
+                                <div class="upcoming-item">
+                                    <div class="upcoming-time">今天 19:00</div>
+                                    <div class="upcoming-name">线性代数 - 矩阵运算</div>
+                                </div>
+                                <div class="upcoming-item">
+                                    <div class="upcoming-time">明天 14:30</div>
+                                    <div class="upcoming-name">数据结构 - 树与图</div>
+                                </div>
+                                <div class="upcoming-item">
+                                    <div class="upcoming-time">明天 20:00</div>
+                                    <div class="upcoming-name">英语写作 - 学术论文</div>
+                                </div>
+                                <div class="upcoming-item">
+                                    <div class="upcoming-time">后天 15:00</div>
+                                    <div class="upcoming-name">机器学习 - 神经网络</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 直播回放 -->
+                        <div class="live-replays">
+                            <h3 class="subsection-title">直播回放</h3>
+                            <div class="replay-list">
+                                <div class="replay-item">
+                                    <div class="replay-thumbnail">
+                                        <img src="https://via.placeholder.com/120x80/1E3A8A/FFFFFF?text=回放" alt="回放">
+                                        <div class="replay-duration">1:25:30</div>
+                                    </div>
+                                    <div class="replay-info">
+                                        <div class="replay-name">高等数学 - 极限与连续</div>
+                                        <div class="replay-meta">
+                                            <span>张教授</span>
+                                            <span>2天前</span>
+                                            <span>1.2万次观看</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="replay-item">
+                                    <div class="replay-thumbnail">
+                                        <img src="https://via.placeholder.com/120x80/166534/FFFFFF?text=回放" alt="回放">
+                                        <div class="replay-duration">1:45:12</div>
+                                    </div>
+                                    <div class="replay-info">
+                                        <div class="replay-name">数据结构 - 排序算法</div>
+                                        <div class="replay-meta">
+                                            <span>王教授</span>
+                                            <span>3天前</span>
+                                            <span>8.5千次观看</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="replay-item">
+                                    <div class="replay-thumbnail">
+                                        <img src="https://via.placeholder.com/120x80/7C2D12/FFFFFF?text=回放" alt="回放">
+                                        <div class="replay-duration">1:10:45</div>
+                                    </div>
+                                    <div class="replay-info">
+                                        <div class="replay-name">英语写作 - 论文结构</div>
+                                        <div class="replay-meta">
+                                            <span>Sarah老师</span>
+                                            <span>5天前</span>
+                                            <span>6.3千次观看</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 精彩评价区域 -->
+        <section class="reviews-section">
+            <div class="reviews-container">
+                <h2 class="section-title">精彩评价</h2>
+                <div class="reviews-scroll-container">
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-avatar">
+                                <img src="https://via.placeholder.com/50/8B1538/FFFFFF?text=张" alt="用户头像">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <span class="review-name">张同学</span>
+                                </div>
+                                <div class="review-text">
+                                    这个平台真的太棒了！课程内容非常丰富，老师讲解也很清晰。特别是AI出题功能，帮我节省了很多时间，题目质量也很高。
+                                </div>
+                                <div class="review-course">来自《高等数学》课程</div>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-avatar">
+                                <img src="https://via.placeholder.com/50/1E3A8A/FFFFFF?text=李" alt="用户头像">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <span class="review-name">李同学</span>
+                                </div>
+                                <div class="review-text">
+                                    直播课程互动性很强，可以实时提问，老师回答也很及时。回放功能也很方便，可以随时复习。
+                                </div>
+                                <div class="review-course">来自《线性代数》课程</div>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-avatar">
+                                <img src="https://via.placeholder.com/50/166534/FFFFFF?text=王" alt="用户头像">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <span class="review-name">王同学</span>
+                                </div>
+                                <div class="review-text">
+                                    数据结构与算法课程讲得非常透彻，从基础到进阶都有覆盖。配套的练习题也很有针对性，对我的编程能力提升很大。
+                                </div>
+                                <div class="review-course">来自《数据结构与算法》课程</div>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-avatar">
+                                <img src="https://via.placeholder.com/50/7C2D12/FFFFFF?text=刘" alt="用户头像">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <span class="review-name">刘同学</span>
+                                </div>
+                                <div class="review-text">
+                                    英语学术写作课程对我的论文写作帮助很大，老师讲解的写作技巧很实用，现在写论文更加得心应手了。
+                                </div>
+                                <div class="review-course">来自《英语学术写作》课程</div>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-avatar">
+                                <img src="https://via.placeholder.com/50/581C87/FFFFFF?text=陈" alt="用户头像">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <span class="review-name">陈同学</span>
+                                </div>
+                                <div class="review-text">
+                                    机器学习基础课程内容很前沿，老师用通俗易懂的方式讲解复杂的算法，让我对AI有了更深入的理解。
+                                </div>
+                                <div class="review-course">来自《机器学习基础》课程</div>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-avatar">
+                                <img src="https://via.placeholder.com/50/8B1538/FFFFFF?text=赵" alt="用户头像">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <span class="review-name">赵同学</span>
+                                </div>
+                                <div class="review-text">
+                                    平台界面设计很美观，使用起来很流畅。课程分类清晰，找课程很方便。整体体验非常好！
+                                </div>
+                                <div class="review-course">来自《高等数学》课程</div>
+                            </div>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-avatar">
+                                <img src="https://via.placeholder.com/50/1E3A8A/FFFFFF?text=孙" alt="用户头像">
+                            </div>
+                            <div class="review-content">
+                                <div class="review-header">
+                                    <span class="review-name">孙同学</span>
+                                </div>
+                                <div class="review-text">
+                                    小智AI助手真的很智能，回答问题很准确，还能帮我生成题目和解析，学习效率大大提高了。
+                                </div>
+                                <div class="review-course">来自《线性代数》课程</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="nav-common.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="search-common.js"></script>
+</body>
+</html>
+

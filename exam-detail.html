@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考试详情 - 智星</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="exam-detail.css">
+</head>
+<body class="theme-wine">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <div class="logo">智星</div>
+                <div class="platform-info">
+                    <div class="platform-name">AI线上课程平台</div>
+                    <div class="platform-slogan" id="platformSlogan">你的线上学习好伙伴</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-center">
+            <a href="#" class="nav-item" id="homeLink">主页</a>
+            <a href="#" class="nav-item" id="coursesLink">课程中心</a>
+            <a href="#" class="nav-item" id="learningLink">课程学习</a>
+            <a href="#" class="nav-item" id="schoolLink">学校</a>
+            <a href="#" class="nav-item active" id="examLink">课程考试</a>
+            <a href="#" class="nav-item ai-assistant" id="aiLink">
+                <span class="ai-text">Hi，小智！</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <!-- 主题选择器下拉菜单 -->
+            <div class="theme-selector-dropdown">
+                <span class="theme-selector-trigger">选择主题颜色</span>
+                <div class="theme-dropdown-menu">
+                    <button class="theme-option" data-theme="wine">
+                        <span class="theme-color wine"></span>
+                        <span class="theme-name">酒红色</span>
+                    </button>
+                    <button class="theme-option" data-theme="blue">
+                        <span class="theme-color blue"></span>
+                        <span class="theme-name">深蓝色</span>
+                    </button>
+                    <button class="theme-option" data-theme="green">
+                        <span class="theme-color green"></span>
+                        <span class="theme-name">深绿色</span>
+                    </button>
+                </div>
+            </div>
+            <!-- 用户头像 -->
+            <div class="user-avatar-container">
+                <img src="" alt="头像" class="user-avatar" id="userAvatar">
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="exam-detail-main">
+        <div class="exam-detail-container">
+            <!-- 返回按钮 -->
+            <button class="back-btn" id="backBtn">← 返回</button>
+
+            <!-- 考试信息 -->
+            <div class="exam-info-card">
+                <div class="exam-type-badge" id="examTypeBadge">期中考试</div>
+                <h1 class="exam-title" id="examTitle">高等数学期中考试</h1>
+                <div class="exam-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">考试科目：</span>
+                        <span class="meta-value" id="examSubject">高等数学</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">考试时长：</span>
+                        <span class="meta-value" id="examDuration">120 分钟</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">考试时间：</span>
+                        <span class="meta-value" id="examTime">2024年12月15日 14:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 考试须知弹窗 -->
+            <div class="notice-modal" id="noticeModal" style="display: flex;">
+                <div class="notice-content">
+                    <h2 class="notice-title">考试须知</h2>
+                    <div class="notice-text">
+                        <p><strong>请仔细阅读以下考试须知：</strong></p>
+                        <ol>
+                            <li>考试时间为 <span id="noticeDuration">120</span> 分钟，请在规定时间内完成答题。</li>
+                            <li>考试过程中请保持网络连接稳定，避免中途断网导致答题丢失。</li>
+                            <li>考试开始后，系统将自动计时，时间到后系统将自动提交试卷。</li>
+                            <li>请诚信考试，独立完成，不得查阅资料或与他人交流。</li>
+                            <li>简答题可以手写过程并拍照上传，请确保照片清晰可见。</li>
+                            <li>提交试卷前请仔细检查所有题目，确认无误后再提交。</li>
+                            <li>提交后无法修改答案，请谨慎操作。</li>
+                        </ol>
+                        <p><strong>我已阅读并同意遵守以上考试规则。</strong></p>
+                    </div>
+                    <div class="notice-timer">
+                        <span>请阅读 <span id="readTimer">5</span> 秒后继续</span>
+                    </div>
+                    <button class="start-exam-btn" id="startExamBtn" disabled>开始考试</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="exam-detail.js"></script>
+</body>
+</html>
+

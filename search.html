@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果 - 智星</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="search-results.css">
+</head>
+<body class="theme-wine">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <div class="logo">智星</div>
+                <div class="platform-info">
+                    <div class="platform-name">AI线上课程平台</div>
+                    <div class="platform-slogan" id="platformSlogan">你的线上学习好伙伴</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-center">
+            <a href="#" class="nav-item" id="homeLink">主页</a>
+            <a href="#" class="nav-item" id="coursesLink">课程中心</a>
+            <a href="#" class="nav-item" id="learningLink">课程学习</a>
+            <a href="#" class="nav-item" id="schoolLink">学校</a>
+            <a href="#" class="nav-item" id="examLink">课程考试</a>
+            <a href="#" class="nav-item ai-assistant" id="aiLink">
+                <span class="ai-text">Hi，小智！</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <!-- 搜索栏 -->
+            <div class="search-container">
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索课程、直播、老师、学校...">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+                <!-- 热门搜索下拉框 -->
+                <div class="search-dropdown" id="searchDropdown">
+                    <div class="search-dropdown-header">热门搜索</div>
+                    <div class="hot-searches">
+                        <div class="hot-search-item" data-keyword="高等数学">高等数学</div>
+                        <div class="hot-search-item" data-keyword="机器学习">机器学习</div>
+                        <div class="hot-search-item" data-keyword="数据结构">数据结构</div>
+                        <div class="hot-search-item" data-keyword="张教授">张教授</div>
+                        <div class="hot-search-item" data-keyword="北京大学">北京大学</div>
+                        <div class="hot-search-item" data-keyword="Python编程">Python编程</div>
+                        <div class="hot-search-item" data-keyword="直播课程">直播课程</div>
+                        <div class="hot-search-item" data-keyword="清华大学">清华大学</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主题选择器下拉菜单 -->
+            <div class="theme-selector-dropdown">
+                <span class="theme-selector-trigger">选择主题颜色</span>
+                <div class="theme-dropdown-menu">
+                    <button class="theme-option" data-theme="wine">
+                        <span class="theme-color wine"></span>
+                        <span class="theme-name">酒红色</span>
+                    </button>
+                    <button class="theme-option" data-theme="blue">
+                        <span class="theme-color blue"></span>
+                        <span class="theme-name">深蓝色</span>
+                    </button>
+                    <button class="theme-option" data-theme="green">
+                        <span class="theme-color green"></span>
+                        <span class="theme-name">深绿色</span>
+                    </button>
+                </div>
+            </div>
+            <!-- 用户头像 -->
+            <div class="user-avatar-container">
+                <img src="" alt="头像" class="user-avatar" id="userAvatar">
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区域 -->
+    <main class="main-content">
+        <div class="search-results-container">
+            <div class="search-header">
+                <h1>搜索结果</h1>
+                <p class="search-query">关键词：<span id="searchKeyword"></span></p>
+            </div>
+
+            <!-- 搜索结果分类标签 -->
+            <div class="result-tabs">
+                <button class="result-tab active" data-type="all">全部</button>
+                <button class="result-tab" data-type="course">课程</button>
+                <button class="result-tab" data-type="teacher">老师</button>
+                <button class="result-tab" data-type="school">学校</button>
+                <button class="result-tab" data-type="live">直播</button>
+            </div>
+
+            <!-- 搜索结果列表 -->
+            <div class="search-results" id="searchResults">
+                <!-- 结果将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
+

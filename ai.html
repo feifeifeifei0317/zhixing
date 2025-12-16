@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小智对话 - 智星</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="ai.css">
+</head>
+<body class="theme-wine">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <div class="logo">智星</div>
+                <div class="platform-info">
+                    <div class="platform-name">AI线上课程平台</div>
+                    <div class="platform-slogan" id="platformSlogan">你的线上学习好伙伴</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-center">
+            <a href="#" class="nav-item" id="homeLinkAI">主页</a>
+            <a href="#" class="nav-item" id="coursesLinkAI">课程中心</a>
+            <a href="#" class="nav-item" id="learningLinkAI">课程学习</a>
+            <a href="#" class="nav-item" id="schoolLinkAI">学校</a>
+            <a href="#" class="nav-item" id="examLinkAI">课程考试</a>
+            <a href="#" class="nav-item ai-assistant active" id="aiLinkAI">
+                <span class="ai-text">Hi，小智！</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <!-- 搜索栏 -->
+            <div class="search-container">
+                <div class="search-box" id="searchBox">
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索课程、直播、老师、学校...">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+                <!-- 热门搜索下拉框 -->
+                <div class="search-dropdown" id="searchDropdown">
+                    <div class="search-dropdown-header">热门搜索</div>
+                    <div class="hot-searches">
+                        <div class="hot-search-item" data-keyword="高等数学">高等数学</div>
+                        <div class="hot-search-item" data-keyword="机器学习">机器学习</div>
+                        <div class="hot-search-item" data-keyword="数据结构">数据结构</div>
+                        <div class="hot-search-item" data-keyword="张教授">张教授</div>
+                        <div class="hot-search-item" data-keyword="北京大学">北京大学</div>
+                        <div class="hot-search-item" data-keyword="Python编程">Python编程</div>
+                        <div class="hot-search-item" data-keyword="直播课程">直播课程</div>
+                        <div class="hot-search-item" data-keyword="清华大学">清华大学</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主题选择器下拉菜单 -->
+            <div class="theme-selector-dropdown">
+                <span class="theme-selector-trigger">选择主题颜色</span>
+                <div class="theme-dropdown-menu">
+                    <button class="theme-option" data-theme="wine">
+                        <span class="theme-color wine"></span>
+                        <span class="theme-name">酒红色</span>
+                    </button>
+                    <button class="theme-option" data-theme="blue">
+                        <span class="theme-color blue"></span>
+                        <span class="theme-name">深蓝色</span>
+                    </button>
+                    <button class="theme-option" data-theme="green">
+                        <span class="theme-color green"></span>
+                        <span class="theme-name">深绿色</span>
+                    </button>
+                </div>
+            </div>
+            <!-- 用户头像 -->
+            <div class="user-avatar-container" id="userAvatarContainerAI">
+                <img src="" alt="头像" class="user-avatar" id="userAvatarAI">
+            </div>
+        </div>
+    </nav>
+
+    <div class="ai-layout">
+        <!-- 左侧导航栏 -->
+        <aside class="ai-sidebar">
+            <div class="ai-avatar-card">
+                <div class="ai-avatar-illustration" id="aiAvatarIllustration">
+                    <div class="avatar-hair"></div>
+                    <div class="avatar-head"></div>
+                    <div class="avatar-body"></div>
+                    <div class="avatar-item"></div>
+                </div>
+                <div class="avatar-switch">
+                    <button class="avatar-btn active" data-gender="female">女生版</button>
+                    <button class="avatar-btn" data-gender="male">男生版</button>
+                </div>
+            </div>
+
+            <nav class="ai-nav">
+                <div class="ai-nav-item active" id="newChatBtn">开启新对话</div>
+                <div class="ai-nav-item" id="aiQuizNavBtn">AI出题</div>
+                <div class="ai-nav-item teacher-only" id="textToPptNavBtn" style="display: none;">文本转PPT</div>
+                <div class="ai-nav-item teacher-only" id="pptToVideoNavBtn" style="display: none;">PPT转视频</div>
+            </nav>
+        </aside>
+
+        <!-- 右侧主区域 -->
+        <main class="ai-main">
+            <header class="ai-header">
+                <h1>Hi，我是小智</h1>
+                <p class="ai-subtitle" id="aiSubtitle">我可以利用全国高校精品学习资源，为你提供专业可信的个性化辅导服务，让我辅助你完成学习吧</p>
+                <div class="ai-quick-actions" id="aiQuickActions">
+                    <!-- 按角色动态生成 -->
+                </div>
+            </header>
+
+            <section class="ai-chat-panel">
+                <div class="chat-toolbar">
+                    <label class="toggle">
+                        <input type="checkbox" id="deepThinkToggle" checked>
+                        <span>AI深度思考</span>
+                    </label>
+                    <label class="toggle">
+                        <input type="checkbox" id="webSearchToggle">
+                        <span>联网搜索</span>
+                    </label>
+
+                    <div class="file-actions">
+                        <label class="file-btn">
+                            上传文件
+                            <input type="file" id="fileInput" multiple>
+                        </label>
+                        <label class="file-btn">
+                            上传图片
+                            <input type="file" id="imageInput" accept="image/*" multiple>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="chat-window" id="chatWindow">
+                    <!-- 消息列表 -->
+                    <div class="chat-message ai">
+                        <div class="chat-bubble">
+                            你好，我是小智，很高兴为你服务！请选择一个分类开始，或直接输入你的问题。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <textarea id="chatInput" placeholder="请输入你的问题，或描述要处理的文件需求..."></textarea>
+                    <button id="sendBtn" class="send-btn">发送</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="nav-common.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="search-common.js"></script>
+    <script src="ai.js"></script>
+</body>
+</html>
+

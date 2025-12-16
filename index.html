@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智星 - AI线上课程平台</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-wine">
+    <div class="container">
+        <!-- 左侧卡通画区域 -->
+        <div class="left-panel">
+            <div class="illustration">
+                <!-- 黑板 -->
+                <div class="blackboard">
+                    <div class="blackboard-frame"></div>
+                    <div class="chalk-text">智星</div>
+                    <div class="chalk-line"></div>
+                    <div class="chalk-slogan" id="chalkSlogan">你的线上学习好伙伴</div>
+                </div>
+                
+                <!-- 书本 -->
+                <div class="book book-1">
+                    <div class="book-cover">
+                        <div class="book-title">AI</div>
+                    </div>
+                    <div class="book-pages">
+                        <div class="page-content">人工智能</div>
+                    </div>
+                </div>
+                <div class="book book-2">
+                    <div class="book-cover">
+                        <div class="book-title">学习</div>
+                    </div>
+                    <div class="book-pages">
+                        <div class="page-content">在线教育</div>
+                    </div>
+                </div>
+                <div class="book book-3">
+                    <div class="book-cover">
+                        <div class="book-title">智星</div>
+                    </div>
+                    <div class="book-pages">
+                        <div class="page-content">智慧平台</div>
+                    </div>
+                </div>
+                
+                <!-- 星星装饰 -->
+                <div class="star star-1"></div>
+                <div class="star star-2"></div>
+                <div class="star star-3"></div>
+            </div>
+        </div>
+
+        <!-- 右侧登录/注册区域 -->
+        <div class="right-panel">
+            <!-- 主题选择器 -->
+            <div class="theme-selector">
+                <button class="theme-btn active" data-theme="wine" title="酒红色">
+                    <span class="theme-color wine"></span>
+                </button>
+                <button class="theme-btn" data-theme="blue" title="深蓝色">
+                    <span class="theme-color blue"></span>
+                </button>
+                <button class="theme-btn" data-theme="green" title="深绿色">
+                    <span class="theme-color green"></span>
+                </button>
+            </div>
+
+            <!-- 登录表单 -->
+            <div class="form-container" id="loginForm">
+                <div class="form-header">
+                    <h1>智星</h1>
+                    <p class="subtitle">AI线上课程平台</p>
+                </div>
+
+                <div class="role-selector">
+                    <button class="role-btn active" data-role="student">学生端</button>
+                    <button class="role-btn" data-role="teacher">教师端</button>
+                </div>
+
+                <form id="loginFormElement" class="form">
+                    <div class="form-group">
+                        <label for="loginEmail" id="loginLabel">邮箱或学号</label>
+                        <input type="text" id="loginEmail" name="email" placeholder="请输入邮箱或学号" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">密码</label>
+                        <input type="password" id="loginPassword" name="password" placeholder="请输入您的密码" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe">
+                            <span>记住我</span>
+                        </label>
+                        <a href="#" class="forgot-password">忘记密码？</a>
+                    </div>
+
+                    <button type="submit" class="submit-btn">登录</button>
+                </form>
+
+                <div class="form-footer">
+                    <p>还没有账号？<a href="#" id="switchToRegister">立即注册</a></p>
+                </div>
+            </div>
+
+            <!-- 注册表单 -->
+            <div class="form-container hidden" id="registerForm">
+                <div class="form-header">
+                    <h1>注册账号</h1>
+                    <p class="subtitle">加入智星，开启学习之旅</p>
+                </div>
+
+                <div class="role-selector">
+                    <button class="role-btn active" data-role="student">学生</button>
+                    <button class="role-btn" data-role="teacher">教师</button>
+                </div>
+
+                <form id="registerFormElement" class="form">
+                    <div class="form-group">
+                        <label for="registerEmail">邮箱</label>
+                        <input type="email" id="registerEmail" name="email" placeholder="请输入您的邮箱" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="verificationCode">邮箱验证码</label>
+                        <div class="code-input-group">
+                            <input type="text" id="verificationCode" name="verificationCode" placeholder="请输入6位验证码" maxlength="6" pattern="[0-9]{6}" required>
+                            <button type="button" id="sendCodeBtn" class="send-code-btn">发送验证码</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerId" id="registerIdLabel">学号</label>
+                        <input type="text" id="registerId" name="id" placeholder="请输入学号" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">密码</label>
+                        <input type="password" id="registerPassword" name="password" placeholder="请设置密码（至少6位）" required minlength="6">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">确认密码</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="请再次输入密码" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">注册</button>
+                </form>
+
+                <div class="form-footer">
+                    <p>已有账号？<a href="#" id="switchToLogin">立即登录</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
