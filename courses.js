@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // 课程数据
     const coursesData = [
-                { id: 1, title: '高等数学', subject: 'math', difficulty: 'intermediate', instructor: 'zhang', students: 5000, image: 'images/高等数学.jpg' },
+        { id: 1, title: '高等数学', subject: 'math', difficulty: 'intermediate', instructor: 'zhang', students: 5000, image: 'images/高等数学.jpg' },
         { id: 2, title: '线性代数', subject: 'math', difficulty: 'intermediate', instructor: 'li', students: 4200, image: 'images/线性代数.jpg' },
         { id: 3, title: '数据结构与算法', subject: 'cs', difficulty: 'advanced', instructor: 'wang', students: 6800, image: 'images/数据结构与算法.jpg' },
         { id: 4, title: '英语学术写作', subject: 'english', difficulty: 'beginner', instructor: 'sarah', students: 3500, image: 'images/英语学术写作.jpg' },
@@ -151,5 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setupFilters();
     renderCourses();
 });
+
 
 
