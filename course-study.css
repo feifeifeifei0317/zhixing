@@ -1,0 +1,388 @@
+/* 课程学习页面样式 */
+.course-study-main {
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--bg) 0%, #FFFFFF 100%);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.course-study-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 返回按钮 */
+.back-btn {
+    padding: 10px 20px;
+    background: #F5F5F5;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    font-family: inherit;
+}
+
+.back-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateX(-5px);
+}
+
+.course-study-header {
+    margin-bottom: 30px;
+}
+
+.course-study-header h1 {
+    color: var(--primary);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* 课程目录样式 */
+.course-chapters-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chapter-item {
+    background: #F9FAFB;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #E0E0E0;
+    transition: all 0.3s ease;
+}
+
+.chapter-item:hover {
+    border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chapter-header {
+    padding: 18px 20px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chapter-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chapter-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.chapter-info {
+    color: #888;
+    font-size: 14px;
+}
+
+.chapter-toggle {
+    color: var(--primary);
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.chapter-item.expanded .chapter-toggle {
+    transform: rotate(180deg);
+}
+
+.chapter-lessons {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.chapter-item.expanded .chapter-lessons {
+    max-height: 1000px;
+    padding: 15px 20px 20px;
+}
+
+.lesson-item {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.lesson-item:hover {
+    background: rgba(var(--primary-rgb, 139, 21, 56), 0.05);
+}
+
+.lesson-item.completed {
+    color: #999;
+}
+
+.lesson-item.current {
+    color: var(--primary);
+    border-left-color: var(--primary);
+    font-weight: 600;
+}
+
+.lesson-item:not(.completed):not(.current) {
+    color: #333;
+}
+
+.lesson-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E0E0E0;
+    border-radius: 4px;
+    color: #666;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.lesson-item.completed .lesson-icon {
+    background: #E0E0E0;
+    color: #999;
+}
+
+.lesson-item.current .lesson-icon {
+    background: var(--primary);
+    color: white;
+}
+
+.lesson-name {
+    flex: 1;
+    font-size: 15px;
+}
+
+.lesson-duration {
+    color: #888;
+    font-size: 13px;
+}
+
+.enrolled-courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* 课程卡片样式 */
+.course-card-item {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.course-card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.course-card-item .course-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.course-cover-custom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 20px;
+}
+
+.cover-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.cover-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.course-card-item .course-info {
+    padding: 20px;
+}
+
+.course-card-item .course-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.course-card-item .course-description {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.course-card-item .course-meta {
+    padding-top: 15px;
+    border-top: 1px solid #E0E0E0;
+}
+
+.progress-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.progress-label {
+    color: #666;
+    font-size: 13px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #E0E0E0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.empty-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.empty-text {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.empty-link {
+    color: var(--primary);
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.empty-link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 968px) {
+    .course-study-container {
+        padding: 30px 20px;
+    }
+
+    .course-study-header h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-study-main {
+        padding: 20px 10px;
+        margin-top: 60px;
+    }
+
+    .course-study-container {
+        padding: 20px 15px;
+    }
+
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .course-study-header h1 {
+        font-size: 24px;
+    }
+
+    .chapter-header {
+        padding: 14px 16px;
+    }
+
+    .chapter-title {
+        font-size: 16px;
+    }
+
+    .chapter-number {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .lesson-item {
+        padding: 10px 12px;
+    }
+
+    .lesson-name {
+        font-size: 14px;
+    }
+}

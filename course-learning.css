@@ -1,0 +1,296 @@
+/* 课程学习页面样式 */
+.learning-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.learning-section {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.learning-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary);
+}
+
+.courses-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* 已选择课程卡片 */
+.enrolled-course-card {
+    background: #F9FAFB;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-left: 4px solid var(--primary);
+}
+
+.enrolled-course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.enrolled-course-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.enrolled-course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.enrolled-course-card:hover .enrolled-course-image img {
+    transform: scale(1.05);
+}
+
+.enrolled-course-content {
+    padding: 20px;
+}
+
+.enrolled-course-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 学习进度 */
+.progress-section {
+    margin-bottom: 15px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.progress-label {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.progress-percentage {
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background: #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.enrolled-course-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #E0E0E0;
+}
+
+.enrolled-course-instructor {
+    color: #888;
+    font-size: 13px;
+}
+
+.enrolled-course-instructor::before {
+    content: '👨‍🏫 ';
+}
+
+.continue-btn {
+    padding: 8px 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.continue-btn:hover {
+    background: var(--secondary);
+    transform: scale(1.05);
+}
+
+/* 喜欢的课程和关注的课程卡片 */
+.liked-course-card,
+.followed-course-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.liked-course-card:hover,
+.followed-course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.liked-course-image,
+.followed-course-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.liked-course-image img,
+.followed-course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.liked-course-card:hover .liked-course-image img,
+.followed-course-card:hover .followed-course-image img {
+    transform: scale(1.05);
+}
+
+.liked-course-content,
+.followed-course-content {
+    padding: 20px;
+}
+
+.liked-course-title,
+.followed-course-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.liked-course-meta,
+.followed-course-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #888;
+    font-size: 13px;
+}
+
+.liked-course-students::before,
+.followed-course-students::before {
+    content: '👥 ';
+}
+
+/* 空状态 */
+.empty-state {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.empty-state-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.empty-state-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.empty-state-hint {
+    font-size: 14px;
+    color: #BBB;
+}
+
+/* 响应式设计 */
+@media (max-width: 968px) {
+    .learning-page-container {
+        padding: 30px 15px;
+    }
+
+    .learning-section {
+        padding: 30px 20px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .courses-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .learning-page-container {
+        padding: 20px 10px;
+    }
+
+    .learning-section {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .courses-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .enrolled-course-image,
+    .liked-course-image,
+    .followed-course-image {
+        height: 160px;
+    }
+}
+

@@ -1,0 +1,132 @@
+/* 学校页面样式 */
+.schools-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.schools-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.schools-header h1 {
+    color: var(--primary);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* 学校网格 */
+.schools-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.school-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.school-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.school-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary);
+    margin-bottom: 15px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.school-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.school-name {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .schools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 968px) {
+    .schools-page-container {
+        padding: 30px 15px;
+    }
+
+    .schools-header h1 {
+        font-size: 28px;
+    }
+
+    .schools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .school-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .school-name {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .schools-page-container {
+        padding: 20px 10px;
+    }
+
+    .schools-header {
+        margin-bottom: 30px;
+    }
+
+    .schools-header h1 {
+        font-size: 24px;
+    }
+
+    .schools-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .school-card {
+        padding: 20px;
+    }
+
+    .school-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .school-name {
+        font-size: 15px;
+    }
+}
+

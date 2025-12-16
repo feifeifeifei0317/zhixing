@@ -1,0 +1,202 @@
+/* 课程考试页面样式 */
+.exam-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.exam-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.exam-header h1 {
+    color: var(--primary);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.exam-subtitle {
+    color: #666;
+    font-size: 16px;
+}
+
+/* 考试区域 */
+.exam-section {
+    margin-bottom: 50px;
+}
+
+.exam-section:last-child {
+    margin-bottom: 0;
+}
+
+.exam-section-title {
+    color: var(--primary);
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--primary);
+}
+
+.exam-section-icon {
+    font-size: 32px;
+}
+
+/* 考试列表 */
+.exam-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 25px;
+}
+
+.exam-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-left: 4px solid var(--primary);
+}
+
+.exam-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.exam-type {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.exam-type.midterm {
+    background: #FFF3E0;
+    color: #E65100;
+}
+
+.exam-type.final {
+    background: #E3F2FD;
+    color: #1565C0;
+}
+
+.exam-title {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.exam-course {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.exam-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.exam-time::before {
+    content: '📅';
+}
+
+.exam-duration {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.exam-duration::before {
+    content: '⏱️';
+}
+
+.exam-status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.exam-status.upcoming {
+    background: #E8F5E9;
+    color: #2E7D32;
+}
+
+.exam-status.in-progress {
+    background: #FFF3E0;
+    color: #E65100;
+}
+
+.exam-status.completed {
+    background: #F5F5F5;
+    color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 968px) {
+    .exam-page-container {
+        padding: 30px 15px;
+    }
+
+    .exam-header h1 {
+        font-size: 28px;
+    }
+
+    .exam-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .exam-section-title {
+        font-size: 24px;
+    }
+
+    .exam-section {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .exam-page-container {
+        padding: 20px 10px;
+    }
+
+    .exam-header {
+        margin-bottom: 30px;
+    }
+
+    .exam-header h1 {
+        font-size: 24px;
+    }
+
+    .exam-card {
+        padding: 20px;
+    }
+
+    .exam-section-title {
+        font-size: 20px;
+    }
+
+    .exam-section-icon {
+        font-size: 24px;
+    }
+}
+
