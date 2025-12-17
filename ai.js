@@ -273,4 +273,3 @@ document.addEventListener('DOMContentLoaded', () => {
         appendMessage('你好，我是小智，很高兴为你服务！请选择一个分类开始，或直接输入你的问题。', 'ai');
     }
 });
-
