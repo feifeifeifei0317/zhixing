@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const courseDetails = {
         1: {
             title: '高等数学',
-            cover: 'https://via.placeholder.com/400x300/8B1538/FFFFFF?text=高等数学',
+            cover: 'images/高等数学.jpg',
             students: 5000,
             courseCount: 24,
             rating: 4.8,
             instructor: {
                 name: '张教授',
                 title: '数学系教授',
-                avatar: 'https://via.placeholder.com/100/8B1538/FFFFFF?text=张',
+                cover: 'images/高等数学.jpg',
                 desc: '从事高等数学教学20余年，具有丰富的教学经验。曾获得多项教学奖项，擅长将复杂的数学概念用通俗易懂的方式讲解。'
             },
             description: `
@@ -56,14 +56,14 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         2: {
             title: '线性代数',
-            cover: 'https://via.placeholder.com/400x300/1E3A8A/FFFFFF?text=线性代数',
+            cover: 'images/线性代数.jpg',
             students: 4200,
             courseCount: 20,
             rating: 4.7,
             instructor: {
                 name: '李教授',
                 title: '数学系副教授',
-                avatar: 'https://via.placeholder.com/100/1E3A8A/FFFFFF?text=李',
+                avatar: 'images/头像2.jpg',
                 desc: '专注于线性代数教学与研究，发表多篇学术论文。教学风格严谨，注重培养学生的抽象思维能力。'
             },
             description: `
@@ -91,14 +91,14 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         3: {
             title: '数据结构与算法',
-            cover: 'https://via.placeholder.com/400x300/166534/FFFFFF?text=数据结构',
+            cover: 'images/数据结构与算法.jpg',
             students: 6800,
             courseCount: 32,
             rating: 4.9,
             instructor: {
                 name: '王教授',
                 title: '计算机系教授',
-                avatar: 'https://via.placeholder.com/100/166534/FFFFFF?text=王',
+                avatar: 'images/头像3.jpg',
                 desc: '计算机科学领域资深专家，拥有丰富的算法设计经验。曾参与多个大型软件项目的开发，擅长将理论与实践相结合。'
             },
             description: `
@@ -126,8 +126,100 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // 课程名称到图片路径的映射
+    const courseImageMap = {
+        '高等数学': 'images/高等数学.jpg',
+        '线性代数': 'images/线性代数.jpg',
+        '数据结构与算法': 'images/数据结构与算法.jpg',
+        '英语学术写作': 'images/英语学术写作.jpg',
+        '机器学习基础': 'images/机器学习基础.jpg',
+        '音乐理论基础': 'images/音乐理论基础.jpg',
+        '心理学导论': 'images/心理学导论.jpg',
+        '职业生涯规划': 'images/职业生涯规划.jpg',
+        '大学物理': 'images/大学物理.jpg',
+        '有机化学': 'images/有机化学.jpg',
+        '细胞生物学': 'images/细胞生物学.jpg',
+        '中国近现代史': 'images/中国近现代史.jpg',
+        '数字艺术设计': 'images/数字艺术设计.jpg',
+        '钢琴基础教程': 'images/钢琴基础教程.jpg',
+        '认知心理学': 'images/认知心理学.jpg',
+        '就业指导与规划': 'images/就业指导与规划.jpg',
+        '量子物理导论': 'images/量子物理导论.jpg',
+        '分析化学': 'images/分析化学.jpg',
+        '遗传学': 'images/遗传学.jpg',
+        '世界古代史': 'images/世界古代史.jpg',
+        '素描基础': 'images/素描基础.jpg',
+        '微积分进阶': 'images/微积分.jpg',
+        'Java编程基础': 'images/Java编程基础.jpg',
+        '商务英语': 'images/商务英语.jpg'
+    };
+
+    // 讲师名称到头像的映射
+    const instructorAvatarMap = {
+        '张教授': 'images/头像1.jpg',
+        '李教授': 'images/头像2.jpg',
+        '王教授': 'images/头像3.jpg',
+        '陈教授': 'images/头像5.jpg',
+        'Sarah老师': 'images/头像4.jpg',
+        '刘老师': 'images/头像4.jpg',
+        '赵教授': 'images/头像6.jpg',
+        '孙老师': 'images/头像7.jpg',
+        '周教授': 'images/头像1.jpg',
+        '吴老师': 'images/头像2.jpg',
+        '郑教授': 'images/头像3.jpg'
+    };
+
     // 获取课程数据（如果不存在则使用默认数据）
-    const courseData = courseDetails[courseId] || courseDetails[1];
+    let courseData = courseDetails[courseId];
+    
+    // 如果课程数据不存在，创建默认数据
+    if (!courseData) {
+        // 从courses.js的数据中获取基本信息（这里需要手动匹配）
+        const courseTitles = {
+            4: '英语学术写作', 5: '机器学习基础', 6: '音乐理论基础',
+            7: '心理学导论', 8: '职业生涯规划', 9: '大学物理',
+            10: '有机化学', 11: '细胞生物学', 12: '中国近现代史',
+            13: '数字艺术设计', 14: '钢琴基础教程', 15: '认知心理学',
+            16: '就业指导与规划', 17: '量子物理导论', 18: '分析化学',
+            19: '遗传学', 20: '世界古代史', 21: '素描基础',
+            22: '微积分进阶', 23: 'Java编程基础', 24: '商务英语'
+        };
+        
+        const title = courseTitles[courseId] || '高等数学';
+        const coverImage = courseImageMap[title] || 'images/高等数学.jpg';
+        
+        courseData = {
+            title: title,
+            cover: coverImage,
+            students: 3000,
+            courseCount: 20,
+            rating: 4.5,
+            instructor: {
+                name: '讲师',
+                title: '专业讲师',
+                avatar: 'images/头像1.jpg',
+                desc: '具有丰富的教学经验，致力于为学生提供优质的教学服务。'
+            },
+            description: `<p>${title}是一门重要的课程，通过系统的学习，学生将掌握相关知识和技能。</p>`,
+            chapters: [
+                {
+                    title: '第一章 课程导论',
+                    lessons: [
+                        { name: '1.1 课程介绍', duration: '15:30' },
+                        { name: '1.2 学习目标', duration: '12:20' }
+                    ]
+                }
+            ]
+        };
+    } else {
+        // 如果课程数据存在，确保使用正确的图片路径
+        if (courseImageMap[courseData.title]) {
+            courseData.cover = courseImageMap[courseData.title];
+        }
+        if (instructorAvatarMap[courseData.instructor.name]) {
+            courseData.instructor.avatar = instructorAvatarMap[courseData.instructor.name];
+        }
+    }
 
     // 加载课程信息
     function loadCourseData() {
@@ -232,4 +324,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化
     loadCourseData();
 });
+
 
